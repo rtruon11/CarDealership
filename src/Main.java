@@ -13,6 +13,7 @@ public class Main {
         final char CUST_PRNT = 'P';
         final char INV_PRNT = 'I';
         final char SALES_CODE = 'T';
+        final char SALES_PERSON = 'S';
         final char HELP_CODE = '?';
         char userAction;
         System.out.println("Team 4 Car Dealership");
@@ -24,7 +25,6 @@ public class Main {
         while (userAction != EXIT_CODE) {
             switch (userAction) {
                 case CUST_CODE:
-
                     cList.add(main.addCustomer());
                     break;
                 case CUST_PRNT:
@@ -34,6 +34,9 @@ public class Main {
                     //Inventory.listInventory(mList);
                     break;
                 case SALES_CODE:
+                    //SalesLead.listSalesLead);
+                    break;
+                case SALES_PERSON:
                     //SalesLead.listSalesLead);
                     break;
             }
@@ -63,6 +66,7 @@ public class Main {
         System.out.println("Please Enter The Customer's Buying Preference (New or Used)");
         cust.setpreference(scnr.nextLine());
         return cust;
+
 
     }
 }

@@ -8,7 +8,7 @@ Last Date Changed: 02/17/2019
 Rev:
 */
 
-public class SalesPerson {
+public class Salesperson {
     //---- Data Members ----//
 
     //ListenToTheCustomersNeeds
@@ -19,11 +19,9 @@ public class SalesPerson {
     private String Need;
 
     //CustomerSelectedVehicle
-    private String Color;
     private String FitsTheNeed;
 
     //CheckInvetory
-    public String VehicleType;
     public String YearMadeAndModel;
     public float Price;
     public String VehicleColor;
@@ -40,84 +38,54 @@ public class SalesPerson {
     //---- Method Members ----//
 
     //--ListenToTheCustomersNeeds--//
-    //Setter and Getter for Sedan
-    public String getSedan() { return Sedan; }
-    public void setSedan(String _Sedan) {this.Sedan = _Sedan;}
-    //Setter and Getter for Trucks
-    public String getTrucks() { return Trucks; }
-    public void setTrucks(String _Trucks) {this.Trucks = _Trucks;}
-    //Setter and Getter for Vans
-    public String getVans() { return Vans; }
-    public void setVans(String _Vans) {this.Vans = _Vans;}
+    //Setter and Getter for PriceRange
+    public String getPriceRange() { return PriceRange; }
+    public void setPriceRange(String _PriceRange) {this.PriceRange = _PriceRange;}
+    //Setter and Getter for VehicleType
+    public String getVehicleType() { return VehicleType; }
+    public void setVehicleType(String _VehicleType) {this.VehicleType = _VehicleType;}
+    //Setter and Getter for Color
+    public String getColor() { return Color; }
+    public void setColor(String _Color) {this.Color = _Color;}
     //Setter and Getter for Hybrid
-    public String getHybrid() { return Hybrid; }
-    public void setHybrid(String _Hybrid) {this.Hybrid = _Hybrid;}
-    //Setter and Getter for Sport
-    public String getSport() { return Sport; }
-    public void setSport(String _Sport) {this.Sport = _Sport;}
+    public String getPayment() { return Payment; }
+    public void setPayment(String _Payment) {this.Payment = _Payment;}
+    //Setter and Getter for Need
+    public String getNeed() { return Need; }
+    public void setNeed(String _Need) {this.Need = _Need;}
+
 
     //--CustomerSelectedVehicle--//
-    //Setter and Getter for SparkPlugs
-    public String getSparkPlugs() { return SparkPlugs; }
-    public void setSparkPlugs(String _SparkPlugs) {this.SparkPlugs = _SparkPlugs;}
-    //Setter and Getter for Valves
-    public String getValves() { return Valves; }
-    public void setValves(String _Valves) {this.Valves = _Valves;}
+    //Setter and Getter for FitsTheNeed
+    public String getFitsTheNeed() { return FitsTheNeed; }
+    public void setFitsTheNeed(String _FitsTheNeed) {this.FitsTheNeed = _FitsTheNeed;}
+
 
     //--CheckInvetory--//
-    //Setter and Getter for Stringerior
-    public String getStringerior() { return Stringerior; }
-    public void setStringerior(String _Stringerior) {this.Stringerior = _Stringerior;}
-    //Setter and Getter for Exterior
-    public String getExterior() { return Exterior; }
-    public void setExterior(String _Exterior) {this.Exterior = _Exterior;}
-    //Setter and Getter for Lighting
-    public String getLighting() { return Lighting; }
-    public void setLighting(String _Lighting) {this.Lighting = _Lighting;}
-    //Setter and Getter for Towing
-    public String getTowing() { return Towing; }
-    public void setTowing(String _Towing) {this.Towing = _Towing;}
+    //Setter and Getter for YearMadeAndModel
+    public String getYearMadeAndModel() { return YearMadeAndModel; }
+    public void setYearMadeAndModel(String _YearMadeAndModel) {this.YearMadeAndModel = _YearMadeAndModel;}
+    //Setter and Getter for Price
+    public float getPrice() { return Price; }
+    public void setPrice(float _Price) {this.Price = _Price;}
+    //Setter and Getter for VehicleColor
+    public String getVehicleColor() { return VehicleColor; }
+    public void setVehicleColor(String _VehicleColor) {this.VehicleColor = _VehicleColor;}
 
     //--Payment--//
-    //Setter and Getter for Duralast
-    public String getDuralast() { return Duralast; }
-    public void setDuralast(String _Duralast) {this.Duralast = _Duralast;}
-    //Setter and Getter for Odyssey
-    public String getOdyssey() { return Odyssey; }
-    public void setOdyssey(String _Odyssey) {this.Odyssey = _Odyssey;}
+    //Setter and Getter for Cash
+    public float getCash() { return Cash; }
+    public void setCash(float _Cash) {this.Cash = _Cash;}
+    //Setter and Getter for Financing
+    public String getFinancing() { return Financing; }
+    public void setFinancing(String _Financing) {this.Financing = _Financing;}
     //Setter and Getter for Optima
-    public String getOptima() { return Optima; }
-    public void setOptima(String _Optima) {this.Optima = _Optima;}
+    public String getLeasing() { return Leasing; }
+    public void setLeasing(String _Leasing) {this.Leasing = _Leasing;}
 
     //--TestDrive--//
     //Setter and Getter for Goodyear
-    public String getGoodyear() { return Goodyear; }
-    public void setGoodyear(String _Goodyear) {this.Goodyear = _Goodyear;}
+    public String getSetATime() { return SetATime; }
+    public void setSetATime(String _SetATime) {this.SetATime = _SetATime;}
 
-    //Arguments
-    public static void main(String[] args) {
-        //--ListenToTheCustomersNeeds--//
-        Inventory s1 = new Inventory();
-        s1.setSedan(1);
-        System.out.println(s1.getSedan());
-
-        Inventory s2 = new Inventory();
-        s2.setTrucks(1);
-        System.out.println(s2.getTrucks());
-
-        Inventory s3 = new Inventory();
-        s3.setVans(1);
-        System.out.println(s3.getVans());
-
-        Inventory s4 = new Inventory();
-        s4.setHybrid(1);
-        System.out.println(s4.getHybrid());
-
-        Inventory s5 = new Inventory();
-        s5.setSport(1);
-        System.out.println(s5.getSport());
-
-
-
-    }
 }
