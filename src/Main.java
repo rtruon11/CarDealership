@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     int cCount = 1;
+    int sCount = 1;
 
     public static void main(String[] args) {
 
@@ -17,8 +18,9 @@ public class Main {
         final char HELP_CODE = '?';
         char userAction;
         System.out.println("Team 4 Car Dealership");
-        final String PROMPT_ACTION = "Add 'C'ustomer, 'P'rint Customer, List 'I'nventory, Add 'O'rder, List 'S'ales Leads or 'E'xit: ";
+        final String PROMPT_ACTION = "Add 'C'ustomer, 'P'rint Customer, List 'I'nventory, Add 'O'rder, List 'S'ales People or 'E'xit: ";
         ArrayList<Customer> cList = new ArrayList<>();
+        ArrayList<Salesperson> sList = new ArrayList<>();
 
         userAction = getAction(PROMPT_ACTION);
 
@@ -37,7 +39,7 @@ public class Main {
                     //SalesLead.listSalesLead);
                     break;
                 case SALES_PERSON:
-                    //SalesLead.listSalesLead);
+                    sList.add(main.addListenToTheCustomersNeeds());
                     break;
             }
 
@@ -66,7 +68,21 @@ public class Main {
         System.out.println("Please Enter The Customer's Buying Preference (New or Used)");
         cust.setpreference(scnr.nextLine());
         return cust;
+    }
 
-
+    public Salesperson addListenToTheCustomersNeeds() {
+        Salesperson needs = new Salesperson();
+        Scanner scnr = new Scanner(System.in);
+        System.out.println("Please Enter The Customer's Price Range: ");
+        needs.setPriceRange(scnr.nextLine());
+        System.out.println("Please Enter The Customer's Vehicle Type (ie SUV, Sedan): ");
+        needs.setVehicleType(scnr.nextLine());
+        System.out.println("Please Enter The Customer's Car Color:  ");
+        needs.setColor(scnr.nextLine());
+        System.out.println("Please Enter The Customer's Payment Type: ");
+        needs.setPayment(scnr.nextLine());
+        System.out.println("Please Enter The Customer's Car Need: ");
+        needs.setNeed(scnr.nextLine());
+        return needs;
     }
 }
